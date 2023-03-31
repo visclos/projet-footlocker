@@ -1,0 +1,51 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Shoes index{% endblock %}
+
+{% block body %}
+    <h1>Shoes index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Price</th>
+                <th>Size</th>
+                <th>Sex</th>
+                <th>Category</th>
+                <th>Dateadd</th>
+                <th>Image</th>
+                <th>Description</th>
+                <th>Quantity</th>
+                <th>Name</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for shoe in shoes %}
+            <tr>
+                <td>{{ shoe.id }}</td>
+                <td>{{ shoe.price }}</td>
+                <td>{{ shoe.size }}</td>
+                <td>{{ shoe.sex }}</td>
+                <td>{{ shoe.category }}</td>
+                <td>{{ shoe.dateadd ? shoe.dateadd|date('Y-m-d') : '' }}</td>
+                <td><img src="{{vich_uploader_asset(shoe)}}" class="card-img-top" alt="{{shoe.image}}"></td>
+                <td>{{ shoe.description }}</td>
+                <td>{{ shoe.quantity }}</td>
+                <td>{{ shoe.name }}</td>
+                <td>
+                    <a href="{{ path('app_admin_shoes_show', {'id': shoe.id}) }}" class="btn btn-dark mb-2">show</a>
+                    <a href="{{ path('app_admin_shoes_edit', {'id': shoe.id}) }}" class="btn btn-dark mb-2">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="11">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_admin_shoes_new') }}" class="btn btn-dark mb-2">Create new</a>
+{% endblock %}

@@ -1,0 +1,129 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello HomeController!{% endblock %}
+
+{% block body %}
+
+
+{# HEROE BANNER #}
+<div class="d-flex min-vh-100 banner-image" style="background-image:url"(https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80)">
+	<div class="align-self-center text-center text-light col-md-8 offset-md-2">
+		<div class="lc-block mb-4">
+			<div>
+				<h1 class="display-1 fw-bolder">footix~locker le spécialiste de la sneaker</h1>
+			</div>
+            <i class="fa-solid fa-2xl fa-arrow-down p-4 mt-5" style="border-radius: 100px; border: 1px solid white;"></i>
+		</div>
+
+
+	</div>
+</div>
+{# <div class="d-flex justify-content-center btn-group btn-group-toggle ">
+    <button type="button" class="btn btn-dark mb-2" ><span>homme</span></button>
+    <button type="button" class="btn btn-dark mb-2" ><span>femme</span></button>
+    <button type="button" class="btn btn-dark mb-2" ><span>unisex</span></button>         
+</div> #}
+ {{ include('shoes/_form.html.twig') }}
+
+ {# tableau #}
+         {# <div class="container">
+           
+           <div class="row">
+               <div class="col-3">
+                  <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt="picture sneaker" style="width:100%; height:auto">
+                  <p class="text-center fw-bolder">derniére sortie</p>
+                  <div class="d-flex flex-column ">
+                        <button type="button" class="btn btn-dark mb-2" ><span>homme</span></button>
+                        <button type="button" class="btn btn-dark mb-2" ><span>femme</span></button>
+                        <button type="button" class="btn btn-dark mb-2" ><span>unisex</span></button>         
+                    </div>
+               </div>
+               <div class="col-3">
+                  <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt="picture sneaker" style="width:100%; height:auto">
+                  <p class="text-center fw-bolder">best sellers</p>
+                    <div class="d-flex flex-column ">
+                        <button type="button" class="btn btn-dark mb-2" ><span>homme</span></button>
+                        <button type="button" class="btn btn-dark mb-2" ><span>femme</span></button>
+                        <button type="button" class="btn btn-dark mb-2" ><span>unisex</span></button>         
+                    </div>
+               </div>
+                <div class="col-3">
+                  <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt="picture sneaker" style="width:100%; height:auto">
+                  <p class="text-center fw-bolder">basketball</p>
+                    <div class="d-flex flex-column ">
+                        <button type="button" class="btn btn-dark mb-2" ><span>homme</span></button>
+                        <button type="button" class="btn btn-dark mb-2" ><span>femme</span></button>
+                        <button type="button" class="btn btn-dark mb-2" ><span>unisex</span></button>         
+                    </div>
+               </div>
+                <div class="col-3">
+                  <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt="picture sneaker" style="width:100%; height:auto">
+                  <p class="text-center fw-bolder">exclusivité</p>
+                    <div class="d-flex flex-column ">
+                        <button type="button" class="btn btn-dark mb-2" ><span>homme</span></button>
+                        <button type="button" class="btn btn-dark mb-2" ><span>femme</span></button>
+                        <button type="button" class="btn btn-dark mb-2" ><span>unisex</span></button>         
+                    </div>
+               </div>
+            </div>
+        </div> #}
+{# liste des produits  #}
+
+
+{# <div class="d-flex justify-content-center btn-group btn-group-toggle ">
+    <button type="button" class="btn btn-dark mb-2" ><span>prix croissant</span></button>
+    <button type="button" class="btn btn-bg-white text-dark mb-2" ><span>prix decroissant</span></button>
+    <button type="button" class="btn btn-dark mb-2" ><span>ajout croissant</span></button> 
+    <button type="button" class="btn btn-bg-white text-dark mb-2" ><span>ajout decroissant</span></button>
+    <button type="button" class="btn btn-dark mb-2" ><span>sneaker</span></button>
+    <button type="button" class="btn btn-bg-white text-dark mb-2" ><span>running</span></button> 
+    <button type="button" class="btn btn-dark mb-2" ><span>alphabetique</span></button>                  
+</div> #}
+
+{# 
+ <div class="container">
+           
+           <div class="row">
+               <div class="card" style="width: 18rem;">
+                    <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt="picture sneaker" style="width:100%; height:auto">
+                    <div class="card-body">
+                        <h5 class="card-title">Jordan</h5>
+                        <p class="card-text">prix 350€</p>
+                        <p class="card-text">description</p>
+                        <a href="#" class="btn btn-primary">voir</a>
+                    </div>
+                </div>
+         </div> #}
+
+
+
+{# <div{{attributes}}> #}
+	{# {% include 'components/_search_form.html.twig' %}
+	<div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4 list"> #}
+        <div class="container">
+			<div class="row">
+		{% for shoes in shoes %}
+				<div class="card" style="width: 33%;">
+					<img src="{{vich_uploader_asset(shoes)}}" class="card-img-top" alt={{shoes.image}}>
+                    <div class="card-body ">
+						<h5 class="card-title text-center text-justify fs-5 ">{{shoes.name}}</h5>
+                        <p class="card-text">prix: {{shoes.price}} €</p>
+						<p class="card-text">{{shoes.description}}</p>
+                        
+					    <a href="{{ path('app_admin_shoes_show', {'id': shoes.id}) }}" class="btn btn-dark mb-2">voir</a>
+					</div>
+				</div>
+
+		{% endfor %}
+			</div>
+        </div>    
+	</div>
+	
+</div>
+   
+
+
+{% endblock %}
+
+
+
