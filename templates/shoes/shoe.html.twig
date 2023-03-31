@@ -1,0 +1,56 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Shoes{% endblock %}
+
+{% block body %}
+    <h1>Shoes</h1>
+
+    <table class="table">
+        <tbody>
+
+            <tr>
+                <th>Image</th>
+                <td><img src="{{vich_uploader_asset(shoe)}}" class="card-img-top" alt={{shoe.image}} style="max-width: 33%;"></td>            </tr>
+            <tr>
+            <tr>
+                <th>Id</th>
+                <td>{{ shoe.id }}</td>
+            </tr>
+            <tr>
+                <th>Price</th>
+                <td>{{ shoe.price }}</td>
+            </tr>
+            <tr>
+                <th>Size</th>
+                <td>{{ shoe.size }}</td>
+            </tr>
+            <tr>
+                <th>Sex</th>
+                <td>{{ shoe.sex }}</td>
+            </tr>
+            <tr>
+                <th>Category</th>
+                <td>{{ shoe.category }}</td>
+            </tr>
+            <tr>
+                <th>Dateadd</th>
+                <td>{{ shoe.dateadd ? shoe.dateadd|date('Y-m-d') : '' }}</td>
+            </tr>
+            
+            <tr>
+                <th>Description</th>
+                <td>{{ shoe.description }}</td>
+            </tr>
+            <tr>
+                <th>Quantity</th>
+                <td>{{ shoe.quantity }}</td>
+            </tr>
+            <tr>
+                <th>Name</th>
+                <td>{{ shoe.name }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+  
+{% endblock %}
